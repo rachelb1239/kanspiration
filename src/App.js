@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Quote from './components/Quote';
+import QuoteContainer from './components/QuoteContainer';
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         INSPIRATION
       </header>
-      <Quote />
+      <QuoteContainer />
     </div>
   );
 }

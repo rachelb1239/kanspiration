@@ -1,9 +1,9 @@
 import React from 'react';
 
- const Quote = () => {
+ const Quote = ({ quote }) => {
   return (
-    <div className="container">
-      <p>I'm such a cool inspirational quote</p>
+    <div className="quote">
+      <p>{quote}</p>
     </div>
   );
 }
