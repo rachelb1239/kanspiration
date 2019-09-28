@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import Quote from './components/Quote';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-          HI I'M TEXT
+        INSPIRATION
       </header>
+      <Quote />
     </div>
   );
 }
