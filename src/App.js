@@ -8,7 +8,9 @@ function App() {
       <header className="App-header">
         INSPIRATION
       </header>
-      <QuoteContainer />
+      <main>
+        <QuoteContainer />
+      </main>
     </div>
   );
 }

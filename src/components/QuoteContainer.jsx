@@ -6,11 +6,23 @@ class QuoteContainer extends Component {
     super(props);
     this.state = { quote: 'quotie boi' };
     this.handleClick = this.handleClick.bind(this);
+    this.fetchQuote = this.fetchQuote.bind(this);
   }
+
+  async fetchQuote () {
+    const response = await fetch('https://api.kanye.rest')
+    const quote = await response.json();
+    return quote;
+  }
+
   handleClick() {
-    this.setState(state => ({
-      quote: 'random quotie boi'
-    }));
+    this.fetchQuote()
+    .then((response) => {
+      this.setState(state => ({
+        quote: response.quote
+      }));
+    })
+    .catch((error) => console.log(error))
   }
 
   render() {
